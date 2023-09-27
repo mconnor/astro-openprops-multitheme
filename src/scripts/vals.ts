@@ -1,0 +1,5 @@
+export const LIGHT = 'light'
+export const DARK = 'dark'
+export const DIM = 'dim'
+export const GRAPE = 'grape'
+export const CHOCO = 'choco'

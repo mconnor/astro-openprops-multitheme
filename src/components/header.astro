@@ -1,0 +1,73 @@
+---
+import * as Theme from '../scripts/vals.ts'
+
+const iTheme = typeof(Theme)
+
+---
+
+
+<script>
+    const switcher = document.querySelector('#theme-switcher')
+const doc = document.firstElementChild
+
+const setTheme = (theme:  string) =>
+  doc && doc.setAttribute('color-scheme', theme)
+
+
+switcher && switcher.addEventListener('input', e =>
+
+
+  setTheme((e.target as HTMLInputElement).value)
+  )
+
+
+</script>
+
+<style>
+.container {
+    display: flex;
+    color: var(--text-1);
+    justify-content: space-around;
+    
+  
+  background-color: var(--surface-4);
+
+}
+
+
+
+
+
+
+</style>
+
+
+    <div id="theme-switcher" class="container">
+      <div>
+        <input checked type="radio" id="auto" name="theme" value="auto">
+        <label for="auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="light" name="theme" value="light">
+        <label for="light">{Theme.LIGHT}</label>
+      </div>
+      <div>
+        <input type="radio" id="dark" name="theme" value="dark">
+        <label for="dark">Dark</label>
+      </div>
+      <div>
+        <input type="radio" id="dim" name="theme" value="dim">
+        <label for="dim">  Dim</label>
+      </div>
+      <div>
+        <input type="radio" id="grape" name="theme" value="grape">
+        <label for="grape">Grape</label>
+      </div>
+      <div>
+        <input type="radio" id="choco" name="theme" value="choco">
+        <label for="choco">Choco</label>
+      </div>
+    </div>
+
+
+  
