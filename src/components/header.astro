@@ -1,73 +1,67 @@
 ---
 import * as Theme from '../scripts/vals.ts'
 
-const iTheme = typeof(Theme)
-
+const iTheme = typeof Theme
 ---
-
 
 <script>
     const switcher = document.querySelector('#theme-switcher')
-const doc = document.firstElementChild
+    const doc = document.firstElementChild
 
-const setTheme = (theme:  string) =>
-  doc && doc.setAttribute('color-scheme', theme)
+    const setTheme = (theme: string) =>
+        doc && doc.setAttribute('color-scheme', theme)
 
-
-switcher && switcher.addEventListener('input', e =>
-
-
-  setTheme((e.target as HTMLInputElement).value)
-  )
-
-
+    switcher &&
+        switcher.addEventListener('input', (e) =>
+            setTheme((e.target as HTMLInputElement).value)
+        )
 </script>
 
 <style>
-.container {
-    display: flex;
-    color: var(--text-1);
-    justify-content: space-around;
-    
-  
-  background-color: var(--surface-4);
+    .container {
+        display: flex;
+        color: var(--text-1);
+        justify-content: space-around;
 
-}
-
-
-
-
-
-
+        background-color: var(--surface-4);
+    }
 </style>
-
-
-    <div id="theme-switcher" class="container">
-      <div>
-        <input checked type="radio" id="auto" name="theme" value="auto">
-        <label for="auto">Auto</label>
-      </div>
-      <div>
-        <input type="radio" id="light" name="theme" value="light">
-        <label for="light">{Theme.LIGHT}</label>
-      </div>
-      <div>
-        <input type="radio" id="dark" name="theme" value="dark">
-        <label for="dark">Dark</label>
-      </div>
-      <div>
-        <input type="radio" id="dim" name="theme" value="dim">
-        <label for="dim">  Dim</label>
-      </div>
-      <div>
-        <input type="radio" id="grape" name="theme" value="grape">
-        <label for="grape">Grape</label>
-      </div>
-      <div>
-        <input type="radio" id="choco" name="theme" value="choco">
-        <label for="choco">Choco</label>
-      </div>
+ /* eslint-disable jsx-a11y/label-has-associated-control */
+<div id="theme-switcher" class="container">
+    <div>
+        <label for="auto"
+            ><input checked type="radio" id="auto" name="theme" value="auto" />
+             Auto</label
+        >
     </div>
-
-
-  
+    <div>
+        <label for="light"
+            ><input type="radio" id="light" name="theme" value="light" />
+            {Theme.LIGHT}</label
+        >
+    </div>
+    <div>
+        <label for="dark"
+            ><input type="radio" id="dark" name="theme" value="dark" />
+             Dark</label
+        >
+    </div>
+    <div>
+        <label for="dim"
+            ><input type="radio" id="dim" name="theme" value="dim" />
+             Dim</label
+        >
+    </div>
+    <div>
+        <label for="grape"
+            ><input type="radio" id="grape" name="theme" value="grape" />
+             Grape</label
+        >
+    </div>
+    <div>
+        <label for="choco"
+            ><input type="radio" id="choco" name="theme" value="choco" />
+             Choco</label
+        >
+    </div>
+</div>
