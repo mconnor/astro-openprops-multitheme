@@ -1,31 +1,6 @@
 ---
 import * as Theme from '../scripts/vals.ts'
-
-const iTheme = typeof Theme
 ---
-
-<script>
-    const switcher = document.querySelector('#theme-switcher')
-    const doc = document.firstElementChild
-
-    const setTheme = (theme: string) =>
-        doc && doc.setAttribute('color-scheme', theme)
-
-    switcher &&
-        switcher.addEventListener('input', (e) =>
-            setTheme((e.target as HTMLInputElement).value)
-        )
-</script>
-
-<style>
-    .container {
-        display: flex;
-        color: var(--text-1);
-        justify-content: space-around;
-
-        background-color: var(--surface-4);
-    }
-</style>
 
 <div id="theme-switcher" class="container">
     <div>
@@ -57,8 +32,13 @@ const iTheme = typeof Theme
         >
     </div>
     <div>
-        <label for="dim"
-            ><input type="radio" id="dim" name="theme" value="dim" />
+        <label for={Theme.DIM}
+            ><input
+                type="radio"
+                id={Theme.DIM}
+                name="theme"
+                value={Theme.DIM}
+            />
              Dim</label
         >
     </div>
