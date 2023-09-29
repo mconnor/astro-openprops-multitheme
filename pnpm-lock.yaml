@@ -31,6 +31,9 @@ devDependencies:
   eslint-plugin-jsx-a11y:
     specifier: ^6.7.1
     version: 6.7.1(eslint@8.50.0)
+  postcss-html:
+    specifier: ^1.5.0
+    version: 1.5.0
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -40,9 +43,9 @@ devDependencies:
   stylelint:
     specifier: ^15.10.3
     version: 15.10.3(typescript@5.2.2)
-  stylelint-config-astro:
-    specifier: ^1.0.4
-    version: 1.0.4(postcss-html@1.5.0)(stylelint@15.10.3)
+  stylelint-config-html:
+    specifier: ^1.1.0
+    version: 1.1.0(postcss-html@1.5.0)(stylelint@15.10.3)
   stylelint-prettier:
     specifier: ^4.0.2
     version: 4.0.2(prettier@3.0.3)(stylelint@15.10.3)
@@ -4938,15 +4941,15 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
-  /stylelint-config-astro@1.0.4(postcss-html@1.5.0)(stylelint@15.10.3):
-    resolution: {integrity: sha512-AzmZX6MbAArMsPe+RqrkHD15YSRc+zd9NwosPIN4zDpXoNC8ExD7xpwRsbe+GSfDveOjK3Fd8BFG6Gss/USc2w==}
+  /stylelint-config-html@1.1.0(postcss-html@1.5.0)(stylelint@15.10.3):
+    resolution: {integrity: sha512-IZv4IVESjKLumUGi+HWeb7skgO6/g4VMuAYrJdlqQFndgbj6WJAXPhaysvBiXefX79upBdQVumgYcdd17gCpjQ==}
+    engines: {node: ^12 || >=14}
     peerDependencies:
       postcss-html: ^1.0.0
       stylelint: '>=14.0.0'
     dependencies:
       postcss-html: 1.5.0
       stylelint: 15.10.3(typescript@5.2.2)
-      typescript: 4.9.5
     dev: true
 
   /stylelint-prettier@4.0.2(prettier@3.0.3)(stylelint@15.10.3):
@@ -5248,12 +5251,6 @@ packages:
     dependencies:
       semver: 7.5.4
     dev: false
-
-  /typescript@4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
-    dev: true
 
   /typescript@5.2.2:
     resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}

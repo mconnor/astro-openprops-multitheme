@@ -20,14 +20,14 @@ const iTheme = typeof Theme
 <style>
     .container {
         display: flex;
-        color: var(--text-1);
+        /* color: var(--text-1); */
         justify-content: space-around;
 
         background-color: var(--surface-4);
     }
 </style>
 
-<div id="theme-switcher" class="container">
+<div id="theme-switcher" class:list={['container btn']}>
     <div>
         <label for="auto"
             ><input checked type="radio" id="auto" name="theme" value="auto" />
