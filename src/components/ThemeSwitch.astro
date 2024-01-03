@@ -1,67 +1,12 @@
 ---
-import * as Theme from '../scripts/vals.ts'
+import Input from './ThemeInput.astro'
 ---
 
 <div id="theme-switcher" class="container">
-    <div>
-        <label for="auto"
-            ><input checked type="radio" id="auto" name="theme" value="auto" />
-             Auto</label
-        >
-    </div>
-    <div>
-        <label for={Theme.LIGHT}
-            ><input
-                type="radio"
-                id={Theme.LIGHT}
-                name="theme"
-                value={Theme.LIGHT}
-            />
-            {Theme.LIGHT}</label
-        >
-    </div>
-    <div>
-        <label for={Theme.DARK}
-            ><input
-                type="radio"
-                id={Theme.DARK}
-                name="theme"
-                value={Theme.DARK}
-            />
-             Dark</label
-        >
-    </div>
-    <div>
-        <label for={Theme.DIM}
-            ><input
-                type="radio"
-                id={Theme.DIM}
-                name="theme"
-                value={Theme.DIM}
-            />
-             Dim</label
-        >
-    </div>
-    <div>
-        <label for={Theme.GRAPE}
-            ><input
-                type="radio"
-                id={Theme.GRAPE}
-                name="theme"
-                value={Theme.GRAPE}
-            />
-             Grape</label
-        >
-    </div>
-    <div>
-        <label for={Theme.CHOCO}
-            ><input
-                type="radio"
-                id={Theme.CHOCO}
-                name="theme"
-                value={Theme.CHOCO}
-            />
-             Choco</label
-        >
-    </div>
+    <Input theme="auto" />
+    <Input theme="light" />
+    <Input theme="dim" />
+    <Input theme="dark" />
+    <Input theme="grape" />
+    <Input theme="choco" />
 </div>

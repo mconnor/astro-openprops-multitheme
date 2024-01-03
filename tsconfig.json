@@ -5,7 +5,8 @@
         "paths": {
             "@components/*": ["src/components/*"],
             "@layouts/*": ["src/layouts/*"],
-            "@content/*": ["src/content/*"]
+            "@content/*": ["src/content/*"],
+            "@scripts/*": ["src/scripts/*"]
         }
     },
     "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.astro"]
