@@ -3,13 +3,18 @@ import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 
 import Header from '../components/header.astro'
+
+
 ---
 
 <script>
+    import { DARK }  from '../scripts/vals.ts'
     const doc = document.firstElementChild
-
-    doc && doc.setAttribute('color-scheme', 'dark')
+    doc && doc.setAttribute('color-scheme', DARK)
 </script>
+
+
+
 <Layout title="Welcome to Astro.">
     <Header />
     <main>
@@ -48,17 +53,18 @@ import Header from '../components/header.astro'
 <style>
     main {
         margin: auto;
-        padding: 1rem;
-        width: 800px;
+        /* padding: 1rem; */
+        border: 1px solid white;
+        width: var(--size-md);
         max-width: calc(100% - 2rem);
         /* color: white; */
         font-size: var(--font-size-2);
         line-height: 1.6;
         display: flex;
+        gap: var(--size-fluid-2);
         flex-direction: column;
 
-        justify-content: center;
-        & h1 {
+        :is(h1) {
             align-self: center;
         }
     }
@@ -71,17 +77,18 @@ import Header from '../components/header.astro'
         background-position: 0%;
     }
     .instructions {
-        margin-bottom: var(--size-4);
-        /* border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        font-size: var(--font-size-3);
+        /* margin-bottom: var(--size-4); */
+        /* background: red; */
+        border: 1px solid rgba(var(--brand), 25%);
+		/* background: linear-gradient(rgba(var(--brand), 66%), rgba(var(--brand), 33%)); */
 		padding: 1.5rem;
-		border-radius: 8px; */
+		border-radius: 8px; 
     }
     .instructions code {
-        font-size: 0.8em;
-        font-weight: bold;
-        background: rgba(var(--accent-light), 12%);
-        color: rgb(var(--accent-light));
+        font-weight: var(--font-weight-300);
+        background: rgba(var(--brand)), 12%);
+        color: var(--text-color-1);
         border-radius: 4px;
         padding: 0.3em 0.4em;
     }
