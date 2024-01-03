@@ -1,20 +1,18 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
 
-type Props = HTMLAttributes<'div'> & {
+type Props = HTMLAttributes<'input'> & {
     theme: string
 }
 
-const { theme, ...props } = Astro.props
+const { theme } = Astro.props
 
 const capitalizeFirstLetter = (str: string) => {
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
 ---
 
-<div>
-    <label for={theme}
-        ><input checked type="radio" id={theme} name="theme" value="auto" />
-        {capitalizeFirstLetter(theme)}</label
-    >
-</div>
+<label for={theme}
+    ><input checked type="radio" id={theme} name="theme" value={theme} />
+    {capitalizeFirstLetter(theme)}</label
+>
