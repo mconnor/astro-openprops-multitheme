@@ -9,7 +9,11 @@ module.exports = {
             files: [
                 path.resolve(
                     __dirname,
-                    'node_modules/open-props/open-props.min.css'
+                    'node_modules/open-props/dist/open-props.min.css'
+                ),
+                path.resolve(
+                    __dirname,
+                    'node_modules/open-props/postcss/normalize.css'
                 ),
             ],
         }),
